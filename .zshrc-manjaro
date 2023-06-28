@@ -15,3 +15,4 @@ plugins=(
     tmuz
     fzf
   )
+alias config='/usr/bin/git --git-dir=/home/ryans/.cfg/ --work-tree=/home/ryans'

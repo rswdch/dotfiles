@@ -1,0 +1,18 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+# Use lunarvim as default vim
+alias vim="lvim"
+# Plugins
+plugins=(
+    tmuz
+    fzf
+  )
+alias config='/usr/bin/git --git-dir=/home/ryans/.cfg/ --work-tree=/home/ryans'

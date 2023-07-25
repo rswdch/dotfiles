@@ -424,7 +424,7 @@ mode "$mode_gaps_outer" {
 }
 
 #interactive screenshot by pressing printscreen
-bindsym Print exec gnome-screenshot -i 
+bindsym Print exec flameshot gui
 #crop-area screenshot by pressing Mod + printscreen
 bindsym $mod+Print exec gnome-screenshot -a
 

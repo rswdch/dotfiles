@@ -1,4 +1,4 @@
-# i3 config file (v4)
+# i3 config file (v4) FOR MANJARO
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
@@ -10,6 +10,10 @@ set $mod Mod4
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 1
 default_floating_border normal
+for_window [instance = "__focused__"] border pixel 5
+# borders at edge of the screen: hide==none means 'show them'
+hide_edge_borders both
+# hide_edge_borders none|vertical|horizontal|both|smart
 
 # Hide borders
 hide_edge_borders none

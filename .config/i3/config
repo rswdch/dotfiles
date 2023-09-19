@@ -128,7 +128,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+# bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -225,7 +225,10 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [title="Zoom"] floating enable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Licensed Account"] floating disable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Free Account"] floating disable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -436,6 +439,7 @@ mode "$mode_gaps_outer" {
 bindsym Print exec flameshot gui
 #crop-area screenshot by pressing Mod + printscreen
 bindsym $mod+Print exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui
 
 # Wallpaper with nitrogen
 exec --no-startup-id nitrogen --set-auto /path/pic1.jpg --head=0 && nitrogen --set-auto $HOME/Pictures/Wallpapers/20230427_161650.png --head=1

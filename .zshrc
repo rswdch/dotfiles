@@ -12,9 +12,11 @@ fi
 alias vim="lvim"
 # Plugins
 plugins=(
-    tmuz
-    fzf
-  )
+  git
+  zsh-autosuggestions
+  tmux
+  fzf
+)
 alias config='/usr/bin/git --git-dir=/home/ryans/.cfg/ --work-tree=/home/ryans'
 
 # Scripts

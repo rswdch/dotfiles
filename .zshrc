@@ -16,3 +16,6 @@ plugins=(
     fzf
   )
 alias config='/usr/bin/git --git-dir=/home/ryans/.cfg/ --work-tree=/home/ryans'
+
+# Scripts
+alias remapcaps='$HOME/.config/i3/scripts/remap_caps.sh'

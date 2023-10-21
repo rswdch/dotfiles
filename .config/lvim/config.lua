@@ -32,7 +32,7 @@ lvim.builtin.which_key.setup.plugins.presets.z = true
 lvim.builtin.which_key.mappings["o"] = { "<cmd>SymbolsOutline<cr>", " Symbol Outline" }
 
 -- -- Change theme settings
-lvim.colorscheme = "codedark"
+lvim.colorscheme = "material-oceanic"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"

@@ -5,7 +5,7 @@
 -- vim options
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 -- general
 lvim.log.level = "info"
@@ -32,7 +32,7 @@ lvim.builtin.which_key.setup.plugins.presets.z = true
 lvim.builtin.which_key.mappings["o"] = { "<cmd>SymbolsOutline<cr>", " Symbol Outline" }
 
 -- -- Change theme settings
-lvim.colorscheme = "codedark"
+lvim.colorscheme = "material-oceanic"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -101,6 +101,8 @@ lvim.plugins = {
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
     "christoomey/vim-tmux-navigator",
+    "tpope/vim-fugitive",
+    "github/copilot.vim",
     -- "Color Schemes"
     "tomasiser/vim-code-dark",
     "marko-cerovac/material.nvim",
@@ -129,9 +131,9 @@ lvim.plugins = {
 -- https://github.com/nvim-treesitter/nvim-treesitter#folding
 -- look for foldenable: https://github.com/neovim/neovim/blob/master/src/nvim/options.lua
 -- Vim cheatsheet, look for folds keys: https://devhints.io/vim
--- vim.opt.foldmethod = "expr" -- default is "normal"
--- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- default is ""
--- vim.opt.foldenable = false -- if this option is true and fold method option is other than normal, every time a document is opened everything will be folded.
+vim.opt.foldmethod = "expr"                     -- default is "normal"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- default is ""
+vim.opt.foldenable = false                      -- if this option is true and fold method option is other than normal, every time a document is opened everything will be folded.
 ---- Folding by indentation
 vim.api.nvim_set_option("foldmethod", "indent")
 vim.api.nvim_set_option("foldlevel", 99)

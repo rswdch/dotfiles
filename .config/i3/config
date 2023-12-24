@@ -296,6 +296,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id blueman-applet
+# exec_always --no-startup-id picom
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
@@ -305,6 +306,9 @@ exec_always --no-startup-id fix_xcursor
 
 # Remap caps lock to control
 exec_always --no-startup-id $HOME/.config/i3/scripts/remap_caps.sh
+
+# Num Lock on startup
+exec --no-startup-id xdotool key --clearmodifiers Num_Lock
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

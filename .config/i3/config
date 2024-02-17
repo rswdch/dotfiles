@@ -228,15 +228,18 @@ for_window [class="Xfburn"] floating enable
 for_window [class="Enpass"] floating enable
 for_window [class="Bitwarden"] floating enable
 for_window [class="SimpleScreenRecorder"] floating enable
+for_window [class="Blueman-manager"] floating enable
 
 # Zoom specific settings
-for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
-for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Licensed Account"] floating disable
-for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Free Account"] floating disable
-for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
+for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable no_focus
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Licensed Account"] floating disable no_focus
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Free Account"] floating disable no_focus
+for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable no_focus
+no_focus [title="^zoom\s?$"]
+no_focus [title="^join\?action=join.*$"]
 
 # switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+# for_window [urgent=latest] focus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

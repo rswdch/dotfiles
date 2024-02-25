@@ -1,0 +1,5 @@
+git:
+  paging:
+    pager: delta --dark --paging=never
+services:
+  'github.gatech.edu': 'github:github.gatech.edu'

@@ -1,0 +1,25 @@
+[user]
+	email = ryan.sawadichai@outlook.com
+	name = rswdch
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[merge]
+	tool = meld
+  ff = false
+  conflictstyle = diff3
+[core]
+	autocrlf = input
+  pager = delta
+  editor = lvim
+[push]
+	autoSetupRemote = true
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  line-numbers = true
+[diff]
+  colorMoved = default

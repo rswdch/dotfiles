@@ -116,6 +116,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="lvim"
 alias remapcaps="~/.config/i3/scripts/remap_caps.sh"
+alias lz='lazygit'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -128,3 +129,6 @@ export NVM_DIR="$HOME/.nvm"
 # Path Variables
 # export NODE_PATH=$NODE_PATH:`npm root -g`
 path+=('~/.dotnet/tools')
+
+# zoxide
+eval "$(zoxide init zsh)"

@@ -131,4 +131,4 @@ export NVM_DIR="$HOME/.nvm"
 path+=('~/.dotnet/tools')
 
 # zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"

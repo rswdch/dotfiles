@@ -21,6 +21,7 @@ lvim.format_on_save = {
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<Leader>lz"] = ":LazyGit<cr>"
 
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -101,6 +102,7 @@ lvim.plugins = {
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
     "christoomey/vim-tmux-navigator",
+    "kdheepak/lazygit.nvim",
     "tpope/vim-fugitive",
     "github/copilot.vim",
     -- "Color Schemes"

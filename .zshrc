@@ -10,6 +10,7 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 # Use lunarvim as default vim
 alias vim="lvim"
+export EDITOR="lvim"
 # Plugins
 plugins=(
   git
@@ -27,3 +28,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+alias lz="lazygit"
+alias lzcfg="lazygit --git-dir=$HOME/.cfg --work-tree=$HOME"

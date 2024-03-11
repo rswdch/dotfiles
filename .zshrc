@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 alias vim="lvim"
 alias remapcaps="~/.config/i3/scripts/remap_caps.sh"
 alias lz='lazygit'
+alias lzcfg='lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -134,7 +135,7 @@ path+=('~/.dotnet/tools')
 eval "$(zoxide init --cmd cd zsh)"
 
 # nnn file manager cd on quit
-nnn ()
+n ()
 {
     # Block nesting of nnn in subshells
     [ "${NNNLVL:-0}" -eq 0 ] || {

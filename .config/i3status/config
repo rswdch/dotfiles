@@ -50,7 +50,7 @@ cpu_temperature 0 {
 }
 wireless _first_ {
 # format_up = "W: (%quality at %essid) %ip"
-format_up = "  %essid %quality "
+format_up = "  %essid %quality %signal"
 format_down = " no wlan "
 }
 ethernet _first_ {
@@ -96,7 +96,7 @@ memory {
 }
 tztime local {
 #        format = "%Y-%m-%d %H:%M:%S"
-format = " %m/%d %H:%M "
+format = " %m/%d %I:%M %p "
 }
 
 # run_watch DHCP {

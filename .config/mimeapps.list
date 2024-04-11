@@ -3,7 +3,7 @@ x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/ftp=userapp-google-chrome.desktop
 x-scheme-handler/chrome=userapp-google-chrome.desktop
-text/html=firefox.desktop
+text/html=google-chrome.desktop
 application/x-extension-htm=userapp-google-chrome.desktop
 application/x-extension-html=userapp-google-chrome.desktop
 application/x-extension-shtml=userapp-google-chrome.desktop
@@ -22,6 +22,9 @@ application/x-zerosize=code.desktop
 x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
 x-scheme-handler/webcal=google-chrome.desktop
 application/x-shellscript=code.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/mailto=google-chrome.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-google-chrome.desktop;firefox.desktop;
@@ -39,7 +42,7 @@ image/jpeg=viewnior.desktop;gpicview.desktop;
 image/png=google-chrome.desktop;viewnior.desktop;gpicview.desktop;
 text/plain=code.desktop;
 message/rfc822=userapp-Thunderbird.desktop;
-application/pdf=epdfview.desktop;
+application/pdf=firefox.desktop;epdfview.desktop;
 application/x-bittorrent=deluge.desktop;
 application/x-zerosize=code.desktop;
 text/x-java=code.desktop;

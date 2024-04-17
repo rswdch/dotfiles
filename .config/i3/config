@@ -231,6 +231,7 @@ for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Free Account
 for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
 for_window [class="Enpass"] floating enable
 for_window [class="Bitwarden"] floating enable
+for_window [title="Bitwarden"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus

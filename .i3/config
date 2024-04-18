@@ -426,7 +426,7 @@ mode "$mode_gaps_outer" {
 #interactive screenshot by pressing printscreen
 bindsym Print exec flameshot gui
 #crop-area screenshot by pressing Mod + printscreen
-bindsym $mod+Print exec gnome-screenshot -a
+# bindsym $mod+Print exec gnome-screenshot -a
 
 # Wallpaper with nitrogen
 exec --no-startup-id nitrogen --set-auto /path/pic1.jpg --head=0 && nitrogen --set-auto $HOME/Pictures/Wallpapers/20230427_161650.png --head=1

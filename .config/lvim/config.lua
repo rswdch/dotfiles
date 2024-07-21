@@ -5,7 +5,7 @@
 -- vim options
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- general
 lvim.log.level = "info"
@@ -58,7 +58,7 @@ lvim.builtin.treesitter.auto_install = true
 -- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
-require("lvim.lsp.manager").setup("pyright", opts)
+-- require("lvim.lsp.manager").setup("pyright", opts)
 require("lvim.lsp.manager").setup("emmet_ls")
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. IMPORTANT: Requires `:LvimCacheReset` to take effect

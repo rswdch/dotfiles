@@ -58,12 +58,12 @@ outer.right =      0
 2 = 'main'
 3 = 'main'
 4 = 'main'
-5 = 'main'
-6 = 'secondary'
-7 = 'secondary'
-8 = 'secondary'
-9 = 'secondary'
-10 = 'secondary'
+5 = 'secondary'
+6 = ['P2422H \(2\)', 'secondary']
+7 = ['P2422H \(2\)', 'secondary']
+8 = ['P2422H \(2\)', 'secondary']
+9 = ['P2422H \(2\)', 'secondary']
+10 = ['P2422H \(1\)', 'secondary']
 
 # See https://nikitabobko.github.io/AeroSpace/guide#exec-env-vars
 [exec]                   # Again, you don't need to copy all config sections to your config.
@@ -96,7 +96,7 @@ PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
 # alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
 
 # i3-like
-alt-enter = 'exec-and-forget open -n /Applications/iTerm.app'
+# alt-enter = 'exec-and-forget open /Applications/kitty.app'
 alt-f = 'fullscreen'
 alt-s = 'layout v_accordion' # 'layout stacking' in i3
 alt-w = 'layout h_accordion' # 'layout tabbed' in i3
@@ -141,16 +141,16 @@ alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
-alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
-alt-shift-0 = 'move-node-to-workspace 10'
+alt-shift-1 = [ 'move-node-to-workspace 1', 'workspace 1' ]
+alt-shift-2 = [ 'move-node-to-workspace 2', 'workspace 2' ]
+alt-shift-3 = [ 'move-node-to-workspace 3', 'workspace 3' ]
+alt-shift-4 = [ 'move-node-to-workspace 4', 'workspace 4' ]
+alt-shift-5 = [ 'move-node-to-workspace 5', 'workspace 5' ]
+alt-shift-6 = [ 'move-node-to-workspace 6', 'workspace 6' ]
+alt-shift-7 = [ 'move-node-to-workspace 7', 'workspace 7' ]
+alt-shift-8 = [ 'move-node-to-workspace 8', 'workspace 8' ]
+alt-shift-9 = [ 'move-node-to-workspace 9', 'workspace 9' ]
+alt-shift-0 = [ 'move-node-to-workspace 10', 'workspace 10' ]
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -182,23 +182,53 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+###############################
+# Window-specific settings
+# Floating
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
 run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
+if.app-id = 'com.apple.finder'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.weather'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.FaceTime'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Maps'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.window-title-regex-substring = 'Bitwarden'
 run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-if.window-title-regex-substring = 'Meet -'
-run = ['move-node-to-workspace 9']
+if.window-title-regex-substring = 'about:blank'
+run = ['layout floating']
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = ['move-node-to-workspace 1']
+if.window-title-regex-substring = 'KDE Connect'
+run = ['layout floating']
 
+## Specific Workspaces
+## Workspace 1
+# Code editors on workspace 1
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = ['move-node-to-workspace 1']
@@ -206,3 +236,31 @@ run = ['move-node-to-workspace 1']
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.WebStorm'
 run = ['move-node-to-workspace 1']
+
+## Workspace 5
+# Personal on workspace 5
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = ['layout floating', 'move-node-to-workspace 5']
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = ['move-node-to-workspace 5']
+
+## Workspace 9
+# Video meetings on workspace 9
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+if.window-title-regex-substring = 'Meet -'
+run = ['move-node-to-workspace 9']
+
+## Workspace 10
+# Slack
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['move-node-to-workspace 10']
+
+# Logseq
+[[on-window-detected]]
+if.app-id = 'com.electron.logseq'
+run = ['move-node-to-workspace 10']

@@ -58,7 +58,7 @@ outer.right =      0
 2 = 'main'
 3 = 'main'
 4 = 'main'
-5 = 'secondary'
+5 = ['HP', 'secondary']
 6 = ['P2422H \(2\)', 'secondary']
 7 = ['P2422H \(2\)', 'secondary']
 8 = ['P2422H \(2\)', 'secondary']
@@ -224,6 +224,10 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.window-title-regex-substring = 'KDE Connect'
+run = ['layout floating']
+
+[[on-window-detected]]
+if.window-title-regex-substring = 'Picture-in-Picture'
 run = ['layout floating']
 
 ## Specific Workspaces

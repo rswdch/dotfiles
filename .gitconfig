@@ -1,46 +1,20 @@
-[init]
-	defaultBranch = main
 [user]
 	name = Ryan Sawadichai
-	email = rsawadichai3@gatech.edu
-	signingKey = ""
-[credential]
-	helper = store
-[color]
-	ui = auto
-[pull]
-	rebase = false
-	ff = true
-[difftool]
-  prompt = true
-[diff]
-  tool = lvimdiff
-  colorMoved = default
-[difftool "lvimdiff"]
-  cmd = "lvim -d \"$LOCAL\" \"$REMOTE\""
-[merge]
-	tool = meld
-	ff = false
-  conflictstyle = diff3
+	email = rsawadichai@jackhenry.com
 [core]
-	autocrlf = input
-	editor = lvim
-  pager = delta
-[gpg]
-	format = openpgp
-	program = gpg
-[commit]
-	gpgSign = false
-[tag]
-	forceSignAnnotated = false
-[gpg "ssh"]
-	program = ssh-keygen
-	allowedSignersFile = ""
-[push]
-	autoSetupRemote = true
+    pager = delta
+    editor = vim
 [interactive]
-  diffFilter = delta --color-only --features=interactive
+    diffFilter = delta --color-only
 [delta]
-  navigate = true
-  light = false
-  line-numbers = true
+    navigate = true    # use n and N to move between diff sections
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+[push]
+	default = upstream
+	autoSetupRemote = true

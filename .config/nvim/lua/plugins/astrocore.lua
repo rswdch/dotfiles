@@ -69,13 +69,17 @@ return {
         -- ["<C-S>"] = false,
 
         -- Custom mappings
-        ["<C-f>"] = {
+        ["<Leader>bb"] = {
           "<cmd>Telescope buffers sort_mru=true sort_lastused=true initial_mode=normal<cr>",
           desc = "Telescope buffers normal mode",
         },
         ["<Leader>fw"] = {
           ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
           desc = "Find words args"
+        },
+        ["<Leader>gn"] = {
+          "<cmd>:Neogit<cr>",
+          desc = "Neogit",
         }
       },
     },

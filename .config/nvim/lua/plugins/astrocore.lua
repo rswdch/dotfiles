@@ -32,6 +32,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        clipboard = "", -- disables yank/delete to clipboard
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

@@ -31,7 +31,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec wezterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -41,6 +41,9 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
+
+# alt-tab
+bindsym mod1+Tab workspace back_and_forth
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -256,12 +259,12 @@ bindsym $mod+0 mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym s exec --no-startup-id "systemctl suspend"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym e exec --no-startup-id "i3-msg exit"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym Shift+s exec --no-startup-id "systemctl poweroff"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -456,3 +459,6 @@ bindsym $mod+Shift+s exec flameshot gui
 
 # Wallpaper with nitrogen
 exec --no-startup-id nitrogen --set-auto /path/pic1.jpg --head=0 && nitrogen --set-auto $HOME/Pictures/Wallpapers/20230427_161650.png --head=1
+
+# xsettingsd to change dark mode based on GNOME
+exec --no-startup-id xsettingsd

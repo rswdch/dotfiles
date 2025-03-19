@@ -21,3 +21,6 @@ vim.filetype.add {
     ["~/%.config/foo/.*"] = "fooscript",
   },
 }
+
+-- Enable cfilter
+vim.cmd("packadd cfilter")

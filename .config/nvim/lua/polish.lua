@@ -21,3 +21,13 @@ vim.filetype.add {
     ["~/%.config/foo/.*"] = "fooscript",
   },
 }
+
+-- Enable cfilter
+vim.cmd("packadd cfilter")
+
+-- vim.api.nvim_create_autocmd('VimEnter', {
+--   once = true, -- Run only once
+--   callback = function()
+--     vim.cmd('colorscheme ' .. (vim.o.background == 'light' and 'modus' or 'gruvbox'))
+--   end
+-- })

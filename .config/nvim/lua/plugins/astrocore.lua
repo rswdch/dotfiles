@@ -83,6 +83,11 @@ return {
           "<cmd>:Neogit<cr>",
           desc = "Neogit",
         },
+        -- eslint
+        ["<Leader>le"] = {
+          ":!npx eslint --fix %<CR>",
+          desc = "eslint fix"
+        },
       },
     },
   },

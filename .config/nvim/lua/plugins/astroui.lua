@@ -11,7 +11,8 @@ return {
   ---@type AstroUIOpts
   opts = {
     -- change colorscheme
-    colorscheme = vim.o.background == "light" and "catppuccin-latte" or "gruvbox",
+    -- colorscheme = vim.o.background == "light" and "modus" or "gruvbox",
+    colorscheme = "modus",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes

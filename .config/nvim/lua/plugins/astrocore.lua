@@ -83,6 +83,10 @@ return {
           "<cmd>:Neogit<cr>",
           desc = "Neogit",
         },
+        ["<Leader>E"] = {
+          "<cmd>Oil --float<cr>",
+          desc = "Oil",
+        },
         -- eslint
         ["<Leader>le"] = {
           ":!npx eslint --fix %<CR>",

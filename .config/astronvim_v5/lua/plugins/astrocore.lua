@@ -87,7 +87,9 @@ return {
         --   desc = "Telescope buffers normal mode",
         -- },
         ["<Leader>bb"] = {
-          function() require("snacks.picker").buffers { focus = "list" } end,
+          function()
+            require("snacks.picker").buffers { focus = "list" }
+          end,
           desc = "Buffers normal mode",
         },
         -- ["<Leader>fw"] = {

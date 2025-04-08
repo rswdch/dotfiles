@@ -11,5 +11,5 @@ return {
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.leap-nvim" },
-  -- import/override with your plugins folder
+  { import = "astrocommunity.git.gitlinker-nvim" },
 }

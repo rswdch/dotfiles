@@ -5,7 +5,8 @@ return {
     picker = {
       sources = {
         buffers = {
-          current = false
+          current = false,
+          sort_lastused = true,
         }
       }
     }

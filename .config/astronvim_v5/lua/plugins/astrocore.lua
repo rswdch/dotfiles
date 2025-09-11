@@ -88,7 +88,7 @@ return {
         -- },
         ["<Leader>bb"] = {
           function()
-            require("snacks.picker").buffers { focus = "list" }
+            require("snacks.picker").buffers {}
           end,
           desc = "Buffers normal mode",
         },

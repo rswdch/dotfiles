@@ -13,6 +13,7 @@ return {
       codelens = true, -- enable/disable codelens refresh on start
       inlay_hints = false, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
+      signature_help = false, -- enable automatic signature help popup globally on startup. K in normal or <C-s> in insert
     },
     -- customize lsp formatting options
     formatting = {

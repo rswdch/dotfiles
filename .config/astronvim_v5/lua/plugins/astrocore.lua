@@ -96,11 +96,11 @@ return {
         --   ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
         --   desc = "Find words args",
         -- },
-        ["<Leader>gn"] = {
+        ["<Leader>gg"] = {
           "<cmd>Neogit<cr>",
           desc = "Neogit",
         },
-        ["<Leader>E"] = {
+        ["<Leader>r"] = {
           "<cmd>Oil --float<cr>",
           desc = "Oil",
         },
@@ -108,6 +108,25 @@ return {
         ["<Leader>le"] = {
           ":!npx eslint --fix %<CR>",
           desc = "eslint fix",
+        },
+        ["<Leader>D"] = {
+          desc = " Diffview",
+        },
+        ["<Leader>Dv"] = {
+          "<cmd>DiffviewOpen<cr>",
+          desc = "Diffview Open",
+        },
+        ["<Leader>Dp"] = {
+          "<cmd>DiffviewOpen origin/HEAD...HEAD --imply-local<cr>",
+          desc = "PR Review",
+        },
+        ["<Leader>DP"] = {
+          "<cmd>DiffviewFileHistory --range=origin/HEAD...HEAD --right-only --no-merges<cr>",
+          desc = "PR Review Commits",
+        },
+        ["<Leader>tc"] = {
+          "<cmd>tabclose<cr>",
+          desc = "Close Tab",
         },
       },
     },
